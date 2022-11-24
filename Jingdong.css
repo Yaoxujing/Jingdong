@@ -1,0 +1,591 @@
+
+    body{
+        /* 上和旁边无边距 */
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* div{
+        width: 100% ;
+    } */
+
+    /* 广告背景盒子 */
+    .background{
+        width: 100%;
+        height: 65px;
+        background: #E96841 ;
+        display: block;
+        position: relative;
+        /* overflow: auto; */
+    }
+    
+
+    /* 广告图片 */
+    .background_ad{
+        width: 70%;
+        height: 100%;
+        position: relative;
+        /* background-color: #ff1; */
+        /* 还真得加这个四个零不然 margin不起作用 */
+        background-image : url("image/AD.JPG");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size :contain;
+        top: 0 ;
+        left: 0 ;
+        right :0 ;
+        bottom : 0 ;
+        margin: auto;
+    }
+
+    .cha{
+        position: absolute;
+        right: 0em;
+    }
+
+
+    /* 信息地址盒子 */
+    .message{
+        width: 100%;
+        height: 30px;
+        background-color: #E3E4E6;
+        overflow: auto;
+        
+    }
+
+    li{
+        /* Flex是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。
+        设为Flex布局以后，子元素的float、clear和vertical-align属性会失效。 */ 
+        color : gray;
+        font-size: 12px;
+        
+    }
+
+    .juzhong{
+        min-width: 400px;
+        max-width: 1200px;
+        margin:auto;
+    }
+
+    /* 定位的盒子 */
+    .message_place{
+        border-left: 5%;
+        /* 使得两个盒子水平放置 */
+        float:left;
+        /* background-color: blue; */
+        padding: 0px 6px;
+        height: 100%;
+        width: 50px;
+    }
+
+
+
+    /* 定位的图标 */
+    .message_place li{
+        /* 在同一层上显示 */
+        display:inline;
+        list-style: none;
+        position: relative;
+        height: 14px;
+        width: 15px;
+        /* padding: 0; */
+        /* overflow: auto; */
+        /* background-color: yellow; */
+    }
+
+    /* 定位的字体 */
+    .message_place span{
+        float:right;
+        position: relative;
+        margin: auto;
+        font-size:12px;
+        color : gray;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    /* 信息的盒子 */
+    .message_text{
+        float: right;
+        display:flex;
+        left : 20%; 
+        height: 50%;
+        width: 78%;
+        margin: 0;
+        padding: 5px;
+        /* display: flex; */
+        /* background-color: #E96841; */
+        /* width:100%; */
+    }
+
+    /* 一些信息的标签 */
+    .message_text li{
+        /* position: relative; */
+        /* top: -20px; */
+        /* display:inline; */
+        list-style: none;
+        width: 100%;
+        display: block; 
+        /* flex-direction: row; */
+        /* 这两个好像失灵了 */
+        padding-left:10px;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid #ccc;
+    }
+
+    .message_text li:hover{
+        color: #000;
+
+    }
+
+
+    /* 接下来的主体部分 */
+    .header{
+        clear: left;
+        height: 20ex;
+    }
+
+    .w{
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content:center; */
+        position: relative;
+        z-index: 11;
+        display: block;
+        margin: auto;
+        height: 80%;
+        width: 80%;
+        /* background-color: aquamarine; */
+        /* border: 1px solid black; */
+        box-sizing: border-box;
+
+    }
+
+    .logo{
+        /* position: absolute; */
+        display: flex;
+        flex: 1;
+        float: left;
+        /* border: 1px solid black; */
+        box-sizing: border-box;
+        width: 7em;
+        height: 7em;
+        margin: 1em;
+    }
+
+    .logo a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url(image/jingdong.JPG);
+    }
+
+    /* 查找盒子 */
+    .search{
+        /* display: flex; */
+        /* flex:1; */
+        height: 2em;
+        padding-top: 2em;
+        /* border: blue 1px solid; */
+        margin: auto;
+        left:9em;
+    }
+
+    .searchForm{
+        position: relative;
+        margin: auto;
+        height: 100%;
+        width: 60%;
+        border: #e2231a 2px solid;
+    }
+
+    .inputS{
+        position: absolute;
+        left: 0;
+        width: 89%;
+        height: 2em;
+        border-radius: 2px;
+        border: 2px  solid #e2231a;
+        padding-left: 25px;
+        box-sizing:border-box;
+        /* border-style: none; */
+    }
+
+    .inputS input{
+        outline: none;
+        border-style: none;
+        padding: 2px;
+        box-sizing:border-box;
+    }
+    .inputS span{
+        position: absolute;
+        right: 5px;   
+        padding: 4px;
+        color: #666;
+        cursor:pointer;
+    }
+    .inputS span:hover{
+        color: #e2231a;
+
+    }
+
+    .searchForm button{
+        display: flex;
+        flex:1;
+        position :absolute;
+        /* flex: right;*/
+        right: 0;
+        /* top:3px; */
+        height: 100%;
+        width: 12%;
+        background-color: #e2231a;
+        border: #e2231a;
+        padding: 0px;
+    }
+
+    .searchForm button:hover{
+        background-color: #bc2a22;
+    }
+
+
+    .searchForm button span{
+        color: #fff;
+        font-size: 20px;
+        margin: auto;
+    }
+
+    .shopCart{
+        width: 12%;
+        height: 2em;
+        position: absolute;
+        /* border: #bc2a22 1px solid; */
+        /* text-color: #e2231a; */
+        right: 5%;
+        top:2em;
+    }
+    .shopCart span{
+        color: #e2231a;
+        padding-right: 5px;
+    }
+    .shopCart button{
+        background-color: #fff;
+        color: #e2231a;
+        width: 100%;
+        height: 100%;
+        border: rgb(169, 169, 169) 1px solid;
+    }
+
+    .shopCart button:hover{
+        border: #e2231a 1px solid;
+    }
+
+    /* 下一阶段 */
+    .hot_word{
+        cursor:pointer;
+        /* position: absolute; */
+        /* bottom: 0px; */
+        /* border: 1px solid black; */
+        width: 60%;
+        font-size: 12px;
+        padding-top:10px;
+        color: #989898;
+        box-sizing: border-box;
+        margin: auto;
+    }
+    .hot_word span{
+        cursor:pointer;
+        margin-left: 8px;
+    }
+
+    .hot_word span:hover{
+        color: #e2231a;
+    }
+
+
+    .navitems{
+        position: relative;
+        width: 80%;
+        display: flex; 
+        /* float: left; */
+        align-items: center;
+        justify-content: center;
+        /* margin-top: 77px; */
+        /* margin-left: 20px; */
+        /* border: 1px solid black; */
+        margin: auto;
+        box-sizing: border-box;
+        top:-10px;
+    }
+    .navitems span{
+        cursor:pointer;
+        color: #2c2c2c;
+        padding: 10px;
+        /* padding-bottom: 4px; */
+    }
+
+    .navitems span:hover{
+        color: #e2231a;
+    }
+
+
+    /* 显示盒子 */
+    .show{
+        height:600px;
+        background-color: #E3E4E6;
+    }
+    
+    .buy{   
+        
+        width: 80%;
+        height: 30em;
+        display: flex;
+        /* border: #000 1px solid; */
+    }
+    .buy div{
+        /* border: #000 1px solid; */
+        margin-left: 8px;
+    }
+
+    /* box1的区域-常用的选项 */
+    .buy .box1{
+        margin-top: 10px;
+        background-color: #fff;
+        margin-left: 0px;
+        flex: 1;
+    }
+
+    .box1 div{  
+        margin-left: 0px;
+        padding: 8px;
+        /* background-color: pink; */
+        font-size: 14px;
+    }
+
+    .box1 div:hover{
+        background-color: #c2c2c2;
+        color: #910700;
+    }
+
+    /* box2的区域-轮播图 */
+    .box2{
+        position: relative;
+        margin-top: 10px;
+        flex: 3;
+        
+    }
+
+    .box2 img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .box2 button{
+        position:absolute;
+        background-color: rgba(255,255,255,0.2);
+        border-style: none;
+        top:50%;
+        cursor:pointer;
+    }
+
+    .box2 button:hover{
+        background-color: rgba(255,255,255,0.6);
+    }
+
+    /* 设置导航按钮 */
+    #navDiv{
+        /* 开启绝对定位 */
+        position:absolute;
+        /* 设置位置 */
+        bottom: 15px;
+        /* left: 100px; */
+        background-color: rgba(255,255,255,0.6);
+        border-radius: 30px;
+
+    }
+    /* 设置超链接 */
+    #navDiv a{
+        /* 设置超链接浮动 */
+        float:left;
+        /* 设置超链接宽高 */
+        width: 15px;
+        height: 15px;
+        /* 设置背景颜色 */
+        background-color: red;
+        /* 设置左右外边距 */
+        margin: 0 5px;
+        /* 设置透明 */
+        opacity: 0.4;
+        /* 兼容ie8透明 */
+        filter: alpha(opacity =40);
+        border-radius: 50%;
+
+    }
+    /* 设置鼠标移入的样式 */
+    #navDiv a:hover{
+        background-color:#910700
+    }
+
+    .image_l{
+        left:0;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .image_r{
+        right:4px;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+
+    /* box3的区域-一些可以点击的图标*/
+    .box3{
+        position: relative;
+        margin-top: 10px;
+        background-color: #fff;
+        flex: 1;
+    }
+
+    .load_in{
+        height: 6em;
+        /* background-color: pink; */
+        border-bottom: #c2c2c2 1px solid;
+    }
+
+    .load_in p{
+        padding-left: 3px;
+    }
+
+    .load_in a{
+        font-size: 14px;
+    }
+   
+
+    #zhuce{
+        border-left: #c2c2c2 1px solid;
+        padding-left:3px ;
+    }
+
+    .box3 button{
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 30px;
+        border-style: none ;
+    }
+
+    #xinr{
+        background-color: #cf2d20;
+        color: #fff;
+    }
+
+    #plus{
+        background-color: #363634;
+        color: #e8db97;
+    }
+
+    #plus:hover{
+        background-color: #cf2d20;
+        color: #fff;
+    }
+
+    .adaim{
+        /* display: block; */
+        /* border: #2c2c2c 1px solid; */
+        float: left;
+        width: 3em;
+        height: 3em;
+    }
+
+    .news{
+        position: relative;
+        padding: 6px;
+        height: 9em;
+        /* background-color: pink; */
+        box-sizing: border-box;
+        border-bottom: #c2c2c2 1px solid;
+    }
+
+    .news h1{
+        font-size: 14px;
+    }
+
+    .news div{
+        position: absolute;
+        top:14px;
+        right: 2px;
+        font-size: 8px;
+    }
+
+    .news p span{
+        padding: 2px;
+        padding-right: 8px;
+        margin-right: 7px;
+        color: #bd2e20;
+        background-color: #fceeed;
+    }
+    .news p{
+        color: #67677f;
+        padding-left: 4px;
+        font-size: 8px;
+    }
+
+    .choose{
+        border-color: #000 1px ;
+        /* background-color: #666; */
+    }
+
+    .model{
+        /* background-color: #2c2c2c; */
+        display: flex;
+        /* flex:1; */
+    }
+
+    .choose .model div{
+        flex:1;
+        /* border: #000 1px solid; */
+        height: 3.3em;
+        box-sizing: border-box;
+    }
+
+    .model span{
+        position: relative;
+        display: block;
+        top:4px;
+        font-size: 28px;
+        padding-left: 10px;
+    }
+
+    .model p{
+        padding: relative;
+        font-size: 10px;
+        padding-left: 10px;
+        top: 6px;
+    }
+
+    .model div:hover span{
+        color: rgb(214, 0, 0);
+    }
+
+    .model div:hover p{
+        color: rgb(214, 0, 0);
+    }
+
+    .plane , .money{
+        color: #ea9d41;
+    }
+
+    .film , .card{
+        color: #cc6d67 ;
+    }
+
+    .tel{
+        color: #70a7df;
+    }
+
+    .house{
+        color: #63dec2;
+    }
+
+
+
